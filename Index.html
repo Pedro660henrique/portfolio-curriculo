@@ -189,48 +189,70 @@
         }
 
         .formacao-item {
-      margin-bottom: 14px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid #f0f0f0;
-    }
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
 
-    .formacao-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+        .formacao-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
-    .formacao-item h3 {
-      font-size: 14px;
-      font-weight: 700;
-      color: #333;
-    }
+        .formacao-item h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+        }
 
-    .formacao-item p {
-      font-size: 13px;
-      color: #777;
-      margin-top: 2px;
-    }
+        .formacao-item p {
+            font-size: 13px;
+            color: #777;
+            margin-top: 2px;
+        }
 
-    /* badge de status (cursando / concluido) */
-    .badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 20px;
-      margin-top: 4px;
-    }
+        /* badge de status (cursando / concluido) */
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-top: 4px;
+        }
 
-    .badge-verde {
-      background-color: #e6f4ea;
-      color: #2e7d32;
-    }
+        .badge-verde {
+            background-color: #e6f4ea;
+            color: #2e7d32;
+        }
 
-    .badge-azul {
-      background-color: #e8f4fd;
-      color: #1565c0;
-    }
+        .badge-azul {
+            background-color: #e8f4fd;
+            color: #1565c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .contato-lista {
+                flex-direction: column;
+                /* lista em coluna no celular */
+            }
+        }
     </style>
 
 </head>
@@ -388,38 +410,51 @@
     </div>
 
     <div class="secao">
-      <h2>🎓 Formação Acadêmica</h2>
+        <h2>🎓 Formação Acadêmica</h2>
 
-      <div class="formacao-item">
-        <h3>Sistemas de Informação</h3>
-        <p>Faculdade de Tecnologia Fortec · 2023 – 2027 · 6º Semestre</p>
-        <span class="badge badge-azul">Cursando</span>
-      </div>
+        <div class="formacao-item">
+            <h3>Sistemas de Informação</h3>
+            <p>Faculdade de Tecnologia Fortec · 2023 – 2027 · 6º Semestre</p>
+            <span class="badge badge-azul">Cursando</span>
+        </div>
 
-      <div class="formacao-item">
-        <h3>Full Stack Web Development – Node.js, React e TypeScript</h3>
-        <p>Udemy · 2026</p>
-        <span class="badge badge-azul">Em andamento</span>
-      </div>
+        <div class="formacao-item">
+            <h3>Full Stack Web Development – Node.js, React e TypeScript</h3>
+            <p>Udemy · 2026</p>
+            <span class="badge badge-azul">Em andamento</span>
+        </div>
 
-      <div class="formacao-item">
-        <h3>React JS Para Iniciante</h3>
-        <p>Udemy · Março/2026 · 30h</p>
-        <span class="badge badge-verde">Concluído</span>
-      </div>
+        <div class="formacao-item">
+            <h3>React JS Para Iniciante</h3>
+            <p>Udemy · Março/2026 · 30h</p>
+            <span class="badge badge-verde">Concluído</span>
+        </div>
 
-      <div class="formacao-item">
-        <h3>Java COMPLETO: POO + Projetos</h3>
-        <p>Udemy · Jun–Set/2025 · 65h</p>
-        <span class="badge badge-verde">Concluído</span>
-      </div>
+        <div class="formacao-item">
+            <h3>Java COMPLETO: POO + Projetos</h3>
+            <p>Udemy · Jun–Set/2025 · 65h</p>
+            <span class="badge badge-verde">Concluído</span>
+        </div>
 
-      <div class="formacao-item">
-        <h3>Algoritmos e Lógica de Programação</h3>
-        <p>Udemy · Mar–Jul/2024 · 40h · C++, C, C#, Python, Java</p>
-        <span class="badge badge-verde">Concluído</span>
-      </div>
+        <div class="formacao-item">
+            <h3>Algoritmos e Lógica de Programação</h3>
+            <p>Udemy · Mar–Jul/2024 · 40h · C++, C, C#, Python, Java</p>
+            <span class="badge badge-verde">Concluído</span>
+        </div>
     </div>
+
+    <footer>
+        Feito por Pedro Henrique dos Santos · 2026
+    </footer>
+
+    </div>
+
+    <script>
+        // pego o ano atual e coloco no rodape
+        var anoAtual = new Date().getFullYear();
+        var rodape = document.querySelector('footer');
+        rodape.textContent = 'Feito por Pedro Henrique dos Santos · ' + anoAtual;
+    </script>
 
 </body>
 
